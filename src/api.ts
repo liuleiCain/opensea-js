@@ -384,7 +384,7 @@ export class OpenSeaAPI {
     const finalOpts = {
       ...opts,
       headers: {
-        ...(apiKey ? { "X-API-KEY": apiKey } : {}),
+        ...(apiKey ? { "X-API-KEY": apiKey } : {"X-API-KEY": ""}),
         ...(opts.headers || {}),
       },
     };
